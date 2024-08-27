@@ -4,15 +4,18 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 # Step 1: Image Preparation
-image = Image.open('/Users/davidkim/Downloads/Screenshot 2024-08-15 at 11.27.20 PM.jpg')
+image = Image.open('/Users/davidkim/Desktop/Screen Shot 2022-12-27 at 6.14.06 AM.png')
+
 image_array = np.array(image)
-pixels = image_array.reshape(-1, 3)  # Reshape to 2D array
+
+pixels = image_array.reshape(-1, 4)  # Reshape to 2D array
+
 
 # Step 2: Feature Extraction
 # In this case, we're using raw pixel values as features
 
 # Step 3-4: Determine number of components and initialize GMM
-n_components = 5  # You can adjust this
+n_components = 7  # You can adjust this
 gmm = GaussianMixture(n_components=n_components, random_state=42)
 
 # Step 5: Fit the GMM (this performs the EM algorithm)
