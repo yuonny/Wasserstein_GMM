@@ -1,11 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
+#from sklearn.mixture import GaussianMixture
 #import matplotlib.image
 #from mpl_toolkits.mplot3d import Axes3D
 
 # reads the image 
 # png so u dont have to normalize 
-u = plt.imread('/Users/davidkim/Desktop/podium.png')
+u = plt.imread('/Users/davidkim/Desktop/pikachu.png')
 
 
 #a tuple package in python that automatticaly assigns the number of rows, columns, and channels in the image
@@ -34,4 +35,4 @@ axis.scatter(Xs[:, 0], Xs[:,1],Xs[:, 2], c=Xs,s=100)
 axis.set_xlabel("Red"), axis.set_ylabel("Green"), axis.set_zlabel("Blue")
 plt.show()
 
-# fit the gaussians 
+
