@@ -9,12 +9,18 @@ from GMM_Visualization.src.main.GMMViz.GmmPlot import GmmViz
 from GMM_Visualization.src.main.GMMViz.DataGenerater import DataGenerater
 #import plotly.io as pio
 #fitting the gaussian to the image
-gmm = GaussianMixture(n_components = 3, covariance_type = 'diag')
+
+#GMM is different from GausianMixture and it is specific to this use case 
+print("hi")
+gmm = GMM(n_components = 3, covariance_type = 'diag')
 gmm.fit(X) 
 
+print("hello")
+
 #see the visualization
+#GmmViz is the class and the V3F is an object with the parameters gmm and utiPlotly
 V3F = GmmViz(gmm, utiPlotly=False)
-V3F.plot(fig_title= os + "GMM-3D", 
+V3F.plot(fig_title= "GMM-3D", 
          path_prefix="GMM_Images", # image will be stored in the `path_prefix` directory.
          show_plot = True, #  tells whether to show the figure through the editor or not. Default is `False`.
          save_plot = True, # export the figures. Default is True
