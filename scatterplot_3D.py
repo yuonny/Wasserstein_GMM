@@ -15,11 +15,6 @@ print(u.shape)
 
 fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(20, 20))
 
-axes[0].imshow(u)
-axes[0].set_title('First image')
-fig.tight_layout()
-
-
 # reshape only works when the size of the reshape is equal to inital shape of the image
 #u[:, :, :3] splits channels 
 # u need to reshape from 3d to 2D to be able to access data 
@@ -33,6 +28,6 @@ fig  = plt.figure(2, figsize=(20, 10))
 axis = fig.add_subplot(1, 2, 1, projection="3d")
 axis.scatter(Xs[:, 0], Xs[:,1],Xs[:, 2], c=Xs,s=100)
 axis.set_xlabel("Red"), axis.set_ylabel("Green"), axis.set_zlabel("Blue")
-plt.show()
+#plt.show()
 
 
