@@ -12,19 +12,20 @@ from GMM_Visualization.src.main.GMMViz.DataGenerater import DataGenerater
 
 #GMM is different from GausianMixture and it is specific to this use case 
 print("hi")
-gmm = GMM(n_components = 3, covariance_type = 'diag')
+gmm = GMM(n_clusters = 3)
 gmm.fit(X) 
 
-print("hello")
 
 #see the visualization
 #GmmViz is the class and the V3F is an object with the parameters gmm and utiPlotly
 V3F = GmmViz(gmm, utiPlotly=False)
+'''
 V3F.plot(fig_title= "GMM-3D", 
          path_prefix="GMM_Images", # image will be stored in the `path_prefix` directory.
-         show_plot = True, #  tells whether to show the figure through the editor or not. Default is `False`.
+         show_plot = False, #  tells whether to show the figure through the editor or not. Default is `False`.
          save_plot = True, # export the figures. Default is True
-         max_iter = 15)
+         max_iter = 33)
+ '''
 
 GmmViz.generateGIF(image_path = "GMM_Images", # directory of the images showing each iteraction
                    output_path_filename = "GMM_Images/gif/GMM-3D-Parms.gif", 
